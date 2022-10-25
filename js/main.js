@@ -15,22 +15,22 @@ let max = 4;
 let min = 0;
 let result;
 
-let value1 = Math.round(Math.random() * (max - min) + min);
+let value_1 = Math.round(Math.random() * (max - min) + min);
 let value2 = Math.round(Math.random() * (max - min) + min);
 
-if(value1 >= value2 && value1 != 0 && value2 != 0){
-    result = value1 / value2;
+if(value_1 >= value2 && value_1 != 0 && value2 != 0){
+    result = value_1 / value2;
     Math.round(result * 100) / 100;
 }
-else if(value1 < value2 && value1 != 0 && value2 != 0){
-    result = value2 / value1;
+else if(value_1 < value2 && value_1 != 0 && value2 != 0){
+    result = value2 / value_1;
     Math.round(result * 100) / 100;
 }
 else{
     result = "dalyba negalima";
 }
 
-console.log("Value1 = " + value1 + " Value2 = " + value2 + " Result = " + result);
+console.log("Value1 = " + value_1 + " Value2 = " + value2 + " Result = " + result);
 
 console.log("3 uzduotis");
 
@@ -297,6 +297,365 @@ console.log("New Clock " + new_hour + ":" + minut2 + ":" + Math.round(new_sec * 
 
 console.log("10 uzduotis");
 
-let mins = "0";
-mins += "46";
-console.log(mins.substring(mins.length - 2));
+let max9 = 9999;
+let min9 = 1000;
+
+let result_1 = 0;
+let result_2 = 0;
+let result_3 = 0;
+let result_4 = 0;
+let result_5 = 0;
+let result_6 = 0;
+
+let value1 = Math.round(Math.random() * (max9 - min9) + min9);
+let value_2 = Math.round(Math.random() * (max9 - min9) + min9);
+let value_3 = Math.round(Math.random() * (max9 - min9) + min9);
+let value_4 = Math.round(Math.random() * (max9 - min9) + min9);
+let value_5 = Math.round(Math.random() * (max9 - min9) + min9);
+let value_6 = Math.round(Math.random() * (max9 - min9) + min9);
+
+// value1
+
+if(value1 > value_2 && value1 > value_3 && value1 > value_4 && value1 > value_5 && value1 > value_6){
+    result_1 = value1;
+}
+if(
+    (value1 > value_2 && value1 > value_3 && value1 > value_4 && value1 > value_5 && value1 < value_6) || 
+    (value1 > value_2 && value1 > value_3 && value1 > value_4 && value1 < value_5 && value1 > value_6) || 
+    (value1 > value_2 && value1 > value_3 && value1 < value_4 && value1 > value_5 && value1 > value_6) || 
+    (value1 > value_2 && value1 < value_3 && value1 > value_4 && value1 > value_5 && value1 > value_6) || 
+    (value1 < value_2 && value1 > value_3 && value1 > value_4 && value1 > value_5 && value1 > value_6)){
+        result_2 = value1;
+    }
+if(
+    (value1 < value_2 && value1 < value_3 && value1 > value_4 && value1 > value_5 && value1 > value_6) || 
+    (value1 < value_2 && value1 > value_3 && value1 < value_4 && value1 > value_5 && value1 > value_6) || 
+    (value1 < value_2 && value1 > value_3 && value1 > value_4 && value1 < value_5 && value1 > value_6) || 
+    (value1 < value_2 && value1 > value_3 && value1 > value_4 && value1 > value_5 && value1 < value_6) || 
+
+    (value1 > value_2 && value1 < value_3 && value1 < value_4 && value1 > value_5 && value1 > value_6) || 
+    (value1 > value_2 && value1 < value_3 && value1 > value_4 && value1 < value_5 && value1 > value_6) || 
+    (value1 > value_2 && value1 < value_3 && value1 > value_4 && value1 > value_5 && value1 < value_6) || 
+
+    (value1 > value_2 && value1 > value_3 && value1 < value_4 && value1 < value_5 && value1 > value_6) || 
+    (value1 > value_2 && value1 > value_3 && value1 < value_4 && value1 > value_5 && value1 < value_6) || 
+
+    (value1 > value_2 && value1 > value_3 && value1 > value_4 && value1 < value_5 && value1 < value_6)
+)
+{
+    result_3 = value1;
+}
+if(
+    (value1 < value_2 && value1 < value_3 && value1 < value_4 && value1 > value_5 && value1 > value_6) || 
+    (value1 < value_2 && value1 < value_3 && value1 > value_4 && value1 < value_5 && value1 > value_6) || 
+    (value1 < value_2 && value1 < value_3 && value1 > value_4 && value1 > value_5 && value1 < value_6) || 
+
+    (value1 > value_2 && value1 < value_3 && value1 < value_4 && value1 < value_5 && value1 > value_6) || 
+    (value1 > value_2 && value1 < value_3 && value1 < value_4 && value1 > value_5 && value1 < value_6) || 
+    
+    (value1 > value_2 && value1 > value_3 && value1 < value_4 && value1 < value_5 && value1 < value_6) || 
+    (value1 > value_2 && value1 < value_3 && value1 > value_4 && value1 < value_5 && value1 < value_6) 
+)
+{
+    result_4 = value1;
+}
+if(
+    (value1 < value_2 && value1 < value_3 && value1 < value_4 && value1 < value_5 && value1 > value_6) ||
+    (value1 < value_2 && value1 < value_3 && value1 < value_4 && value1 > value_5 && value1 < value_6) ||
+    (value1 > value_2 && value1 < value_3 && value1 < value_4 && value1 < value_5 && value1 < value_6)  
+){
+    result_5 = value1;
+}
+if(value1 < value_2 && value1 < value_3 && value1 < value_4 && value1 < value_5 && value1 < value_6){
+    result_6 = value1;
+}
+
+// value_2
+
+if(value_2 > value1 && value_2 > value_3 && value_2 > value_4 && value_2 > value_5 && value_2 > value_6){
+    result_1 = value_2;
+}
+if(
+    (value_2 > value1 && value_2 > value_3 && value_2 > value_4 && value_2 > value_5 && value_2 < value_6) || 
+    (value_2 > value1 && value_2 > value_3 && value_2 > value_4 && value_2 < value_5 && value_2 > value_6) || 
+    (value_2 > value1 && value_2 > value_3 && value_2 < value_4 && value_2 > value_5 && value_2 > value_6) || 
+    (value_2 > value1 && value_2 < value_3 && value_2 > value_4 && value_2 > value_5 && value_2 > value_6) || 
+    (value_2 < value1 && value_2 > value_3 && value_2 > value_4 && value_2 > value_5 && value_2 > value_6)){
+        result_2 = value_2;
+    }
+if(
+    (value_2 < value1 && value_2 < value_3 && value_2 > value_4 && value_2 > value_5 && value_2 > value_6) || 
+    (value_2 < value1 && value_2 > value_3 && value_2 < value_4 && value_2 > value_5 && value_2 > value_6) || 
+    (value_2 < value1 && value_2 > value_3 && value_2 > value_4 && value_2 < value_5 && value_2 > value_6) || 
+    (value_2 < value1 && value_2 > value_3 && value_2 > value_4 && value_2 > value_5 && value_2 < value_6) || 
+
+    (value_2 > value1 && value_2 < value_3 && value_2 < value_4 && value_2 > value_5 && value_2 > value_6) || 
+    (value_2 > value1 && value_2 < value_3 && value_2 > value_4 && value_2 < value_5 && value_2 > value_6) || 
+    (value_2 > value1 && value_2 < value_3 && value_2 > value_4 && value_2 > value_5 && value_2 < value_6) || 
+
+    (value_2 > value1 && value_2 > value_3 && value_2 < value_4 && value_2 < value_5 && value_2 > value_6) || 
+    (value_2 > value1 && value_2 > value_3 && value_2 < value_4 && value_2 > value_5 && value_2 < value_6) || 
+
+    (value_2 > value1 && value_2 > value_3 && value_2 > value_4 && value_2 < value_5 && value_2 < value_6)
+)
+{
+    result_3 = value_2;
+}
+if(
+    (value_2 < value1 && value_2 < value_3 && value_2 < value_4 && value_2 > value_5 && value_2 > value_6) || 
+    (value_2 < value1 && value_2 < value_3 && value_2 > value_4 && value_2 < value_5 && value_2 > value_6) || 
+    (value_2 < value1 && value_2 < value_3 && value_2 > value_4 && value_2 > value_5 && value_2 < value_6) || 
+
+    (value_2 > value1 && value_2 < value_3 && value_2 < value_4 && value_2 < value_5 && value_2 > value_6) || 
+    (value_2 > value1 && value_2 < value_3 && value_2 < value_4 && value_2 > value_5 && value_2 < value_6) || 
+    
+    (value_2 > value1 && value_2 > value_3 && value_2 < value_4 && value_2 < value_5 && value_2 < value_6) || 
+    (value_2 > value1 && value_2 < value_3 && value_2 > value_4 && value_2 < value_5 && value_2 < value_6) 
+)
+{
+    result_4 = value_2;
+}
+if(
+    (value_2 < value1 && value_2 < value_3 && value_2 < value_4 && value_2 < value_5 && value_2 > value_6) ||
+    (value_2 < value1 && value_2 < value_3 && value_2 < value_4 && value_2 > value_5 && value_2 < value_6) ||
+    (value_2 > value1 && value_2 < value_3 && value_2 < value_4 && value_2 < value_5 && value_2 < value_6)  
+){
+    result_5 = value_2;
+}
+if(value_2 < value1 && value_2 < value_3 && value_2 < value_4 && value_2 < value_5 && value_2 < value_6){
+    result_6 = value_2;
+}
+
+// value_3
+
+if(value_3 > value1 && value_3 > value_2 && value_3 > value_4 && value_3 > value_5 && value_3 > value_6){
+    result_1 = value_3;
+}
+if(
+    (value_3 > value1 && value_3 > value_2 && value_3 > value_4 && value_3 > value_5 && value_3 < value_6) || 
+    (value_3 > value1 && value_3 > value_2 && value_3 > value_4 && value_3 < value_5 && value_3 > value_6) || 
+    (value_3 > value1 && value_3 > value_2 && value_3 < value_4 && value_3 > value_5 && value_3 > value_6) || 
+    (value_3 > value1 && value_3 < value_2 && value_3 > value_4 && value_3 > value_5 && value_3 > value_6) || 
+    (value_3 < value1 && value_3 > value_2 && value_3 > value_4 && value_3 > value_5 && value_3 > value_6)){
+        result_2 = value_3;
+    }
+if(
+    (value_3 < value1 && value_3 < value_2 && value_3 > value_4 && value_3 > value_5 && value_3 > value_6) || 
+    (value_3 < value1 && value_3 > value_2 && value_3 < value_4 && value_3 > value_5 && value_3 > value_6) || 
+    (value_3 < value1 && value_3 > value_2 && value_3 > value_4 && value_3 < value_5 && value_3 > value_6) || 
+    (value_3 < value1 && value_3 > value_2 && value_3 > value_4 && value_3 > value_5 && value_3 < value_6) || 
+
+    (value_3 > value1 && value_3 < value_2 && value_3 < value_4 && value_3 > value_5 && value_3 > value_6) || 
+    (value_3 > value1 && value_3 < value_2 && value_3 > value_4 && value_3 < value_5 && value_3 > value_6) || 
+    (value_3 > value1 && value_3 < value_2 && value_3 > value_4 && value_3 > value_5 && value_3 < value_6) || 
+
+    (value_3 > value1 && value_3 > value_2 && value_3 < value_4 && value_3 < value_5 && value_3 > value_6) || 
+    (value_3 > value1 && value_3 > value_2 && value_3 < value_4 && value_3 > value_5 && value_3 < value_6) || 
+
+    (value_3 > value1 && value_3 > value_2 && value_3 > value_4 && value_3 < value_5 && value_3 < value_6)
+)
+{
+    result_3 = value_3;
+}
+if(
+    (value_3 < value1 && value_3 < value_2 && value_3 < value_4 && value_3 > value_5 && value_3 > value_6) || 
+    (value_3 < value1 && value_3 < value_2 && value_3 > value_4 && value_3 < value_5 && value_3 > value_6) || 
+    (value_3 < value1 && value_3 < value_2 && value_3 > value_4 && value_3 > value_5 && value_3 < value_6) || 
+
+    (value_3 > value1 && value_3 < value_2 && value_3 < value_4 && value_3 < value_5 && value_3 > value_6) || 
+    (value_3 > value1 && value_3 < value_2 && value_3 < value_4 && value_3 > value_5 && value_3 < value_6) || 
+    
+    (value_3 > value1 && value_3 > value_2 && value_3 < value_4 && value_3 < value_5 && value_3 < value_6) || 
+    (value_3 > value1 && value_3 < value_2 && value_3 > value_4 && value_3 < value_5 && value_3 < value_6) 
+)
+{
+    result_4 = value_3;
+}
+if(
+    (value_3 < value1 && value_3 < value_2 && value_3 < value_4 && value_3 < value_5 && value_3 > value_6) ||
+    (value_3 < value1 && value_3 < value_2 && value_3 < value_4 && value_3 > value_5 && value_3 < value_6) ||
+    (value_3 > value1 && value_3 < value_2 && value_3 < value_4 && value_3 < value_5 && value_3 < value_6)  
+){
+    result_5 = value_3;
+}
+if(value_3 < value1 && value_3 < value_2 && value_3 < value_4 && value_3 < value_5 && value_3 < value_6){
+    result_6 = value_3;
+}
+
+// value_4
+
+if(value_4 > value1 && value_4 > value_2 && value_4 > value_3 && value_4 > value_5 && value_4 > value_6){
+    result_1 = value_4;
+}
+if(
+    (value_4 > value1 && value_4 > value_2 && value_4 > value_3 && value_4 > value_5 && value_4 < value_6) || 
+    (value_4 > value1 && value_4 > value_2 && value_4 > value_3 && value_4 < value_5 && value_4 > value_6) || 
+    (value_4 > value1 && value_4 > value_2 && value_4 < value_3 && value_4 > value_5 && value_4 > value_6) || 
+    (value_4 > value1 && value_4 < value_2 && value_4 > value_3 && value_4 > value_5 && value_4 > value_6) || 
+    (value_4 < value1 && value_4 > value_2 && value_4 > value_3 && value_4 > value_5 && value_4 > value_6)){
+        result_2 = value_4;
+    }
+if(
+    (value_4 < value1 && value_4 < value_2 && value_4 > value_3 && value_4 > value_5 && value_4 > value_6) || 
+    (value_4 < value1 && value_4 > value_2 && value_4 < value_3 && value_4 > value_5 && value_4 > value_6) || 
+    (value_4 < value1 && value_4 > value_2 && value_4 > value_3 && value_4 < value_5 && value_4 > value_6) || 
+    (value_4 < value1 && value_4 > value_2 && value_4 > value_3 && value_4 > value_5 && value_4 < value_6) || 
+
+    (value_4 > value1 && value_4 < value_2 && value_4 < value_3 && value_4 > value_5 && value_4 > value_6) || 
+    (value_4 > value1 && value_4 < value_2 && value_4 > value_3 && value_4 < value_5 && value_4 > value_6) || 
+    (value_4 > value1 && value_4 < value_2 && value_4 > value_3 && value_4 > value_5 && value_4 < value_6) || 
+
+    (value_4 > value1 && value_4 > value_2 && value_4 < value_3 && value_4 < value_5 && value_4 > value_6) || 
+    (value_4 > value1 && value_4 > value_2 && value_4 < value_3 && value_4 > value_5 && value_4 < value_6) || 
+
+    (value_4 > value1 && value_4 > value_2 && value_4 > value_3 && value_4 < value_5 && value_4 < value_6)
+)
+{
+    result_3 = value_4;
+}
+if(
+    (value_4 < value1 && value_4 < value_2 && value_4 < value_3 && value_4 > value_5 && value_4 > value_6) || 
+    (value_4 < value1 && value_4 < value_2 && value_4 > value_3 && value_4 < value_5 && value_4 > value_6) || 
+    (value_4 < value1 && value_4 < value_2 && value_4 > value_3 && value_4 > value_5 && value_4 < value_6) || 
+
+    (value_4 > value1 && value_4 < value_2 && value_4 < value_3 && value_4 < value_5 && value_4 > value_6) || 
+    (value_4 > value1 && value_4 < value_2 && value_4 < value_3 && value_4 > value_5 && value_4 < value_6) || 
+    
+    (value_4 > value1 && value_4 > value_2 && value_4 < value_3 && value_4 < value_5 && value_4 < value_6) || 
+    (value_4 > value1 && value_4 < value_2 && value_4 > value_3 && value_4 < value_5 && value_4 < value_6) 
+)
+{
+    result_4 = value_4;
+}
+if(
+    (value_4 < value1 && value_4 < value_2 && value_4 < value_3 && value_4 < value_5 && value_4 > value_6) ||
+    (value_4 < value1 && value_4 < value_2 && value_4 < value_3 && value_4 > value_5 && value_4 < value_6) ||
+    (value_4 > value1 && value_4 < value_2 && value_4 < value_3 && value_4 < value_5 && value_4 < value_6)  
+){
+    result_5 = value_4;
+}
+if(value_4 < value1 && value_4 < value_2 && value_4 < value_3 && value_4 < value_5 && value_4 < value_6){
+    result_6 = value_4;
+}
+// value_5
+
+if(value_5 > value1 && value_5 > value_2 && value_5 > value_3 && value_5 > value_4 && value_5 > value_6){
+    result_1 = value_5;
+}
+if(
+    (value_5 > value1 && value_5 > value_2 && value_5 > value_3 && value_5 > value_4 && value_5 < value_6) || 
+    (value_5 > value1 && value_5 > value_2 && value_5 > value_3 && value_5 < value_4 && value_5 > value_6) || 
+    (value_5 > value1 && value_5 > value_2 && value_5 < value_3 && value_5 > value_4 && value_5 > value_6) || 
+    (value_5 > value1 && value_5 < value_2 && value_5 > value_3 && value_5 > value_4 && value_5 > value_6) || 
+    (value_5 < value1 && value_5 > value_2 && value_5 > value_3 && value_5 > value_4 && value_5 > value_6)){
+        result_2 = value_5;
+    }
+if(
+    (value_5 < value1 && value_5 < value_2 && value_5 > value_3 && value_5 > value_4 && value_5 > value_6) || 
+    (value_5 < value1 && value_5 > value_2 && value_5 < value_3 && value_5 > value_4 && value_5 > value_6) || 
+    (value_5 < value1 && value_5 > value_2 && value_5 > value_3 && value_5 < value_4 && value_5 > value_6) || 
+    (value_5 < value1 && value_5 > value_2 && value_5 > value_3 && value_5 > value_4 && value_5 < value_6) || 
+
+    (value_5 > value1 && value_5 < value_2 && value_5 < value_3 && value_5 > value_4 && value_5 > value_6) || 
+    (value_5 > value1 && value_5 < value_2 && value_5 > value_3 && value_5 < value_4 && value_5 > value_6) || 
+    (value_5 > value1 && value_5 < value_2 && value_5 > value_3 && value_5 > value_4 && value_5 < value_6) || 
+
+    (value_5 > value1 && value_5 > value_2 && value_5 < value_3 && value_5 < value_4 && value_5 > value_6) || 
+    (value_5 > value1 && value_5 > value_2 && value_5 < value_3 && value_5 > value_4 && value_5 < value_6) || 
+
+    (value_5 > value1 && value_5 > value_2 && value_5 > value_3 && value_5 < value_4 && value_5 < value_6)
+)
+{
+    result_3 = value_5;
+}
+if(
+    (value_5 < value1 && value_5 < value_2 && value_5 < value_3 && value_5 > value_4 && value_5 > value_6) || 
+    (value_5 < value1 && value_5 < value_2 && value_5 > value_3 && value_5 < value_4 && value_5 > value_6) || 
+    (value_5 < value1 && value_5 < value_2 && value_5 > value_3 && value_5 > value_4 && value_5 < value_6) || 
+
+    (value_5 > value1 && value_5 < value_2 && value_5 < value_3 && value_5 < value_4 && value_5 > value_6) || 
+    (value_5 > value1 && value_5 < value_2 && value_5 < value_3 && value_5 > value_4 && value_5 < value_6) || 
+    
+    (value_5 > value1 && value_5 > value_2 && value_5 < value_3 && value_5 < value_4 && value_5 < value_6) || 
+    (value_5 > value1 && value_5 < value_2 && value_5 > value_3 && value_5 < value_4 && value_5 < value_6) 
+)
+{
+    result_4 = value_5;
+}
+if(
+    (value_5 < value1 && value_5 < value_2 && value_5 < value_3 && value_5 < value_4 && value_5 > value_6) ||
+    (value_5 < value1 && value_5 < value_2 && value_5 < value_3 && value_5 > value_4 && value_5 < value_6) ||
+    (value_5 > value1 && value_5 < value_2 && value_5 < value_3 && value_5 < value_4 && value_5 < value_6)  
+){
+    result_5 = value_5;
+}
+if(value_5 < value1 && value_5 < value_2 && value_5 < value_3 && value_5 < value_4 && value_5 < value_6){
+    result_6 = value_5;
+}
+
+// value_6
+
+if(value_6 > value1 && value_6 > value_2 && value_6 > value_3 && value_6 > value_5 && value_6 > value_4){
+    result_1 = value_6;
+}
+if(
+    (value_6 > value1 && value_6 > value_2 && value_6 > value_3 && value_6 > value_5 && value_6 < value_4) || 
+    (value_6 > value1 && value_6 > value_2 && value_6 > value_3 && value_6 < value_5 && value_6 > value_4) || 
+    (value_6 > value1 && value_6 > value_2 && value_6 < value_3 && value_6 > value_5 && value_6 > value_4) || 
+    (value_6 > value1 && value_6 < value_2 && value_6 > value_3 && value_6 > value_5 && value_6 > value_4) || 
+    (value_6 < value1 && value_6 > value_2 && value_6 > value_3 && value_6 > value_5 && value_6 > value_4)){
+        result_2 = value_6;
+    }
+if(
+    (value_6 < value1 && value_6 < value_2 && value_6 > value_3 && value_6 > value_5 && value_6 > value_4) || 
+    (value_6 < value1 && value_6 > value_2 && value_6 < value_3 && value_6 > value_5 && value_6 > value_4) || 
+    (value_6 < value1 && value_6 > value_2 && value_6 > value_3 && value_6 < value_5 && value_6 > value_4) || 
+    (value_6 < value1 && value_6 > value_2 && value_6 > value_3 && value_6 > value_5 && value_6 < value_4) || 
+
+    (value_6 > value1 && value_6 < value_2 && value_6 < value_3 && value_6 > value_5 && value_6 > value_4) || 
+    (value_6 > value1 && value_6 < value_2 && value_6 > value_3 && value_6 < value_5 && value_6 > value_4) || 
+    (value_6 > value1 && value_6 < value_2 && value_6 > value_3 && value_6 > value_5 && value_6 < value_4) || 
+
+    (value_6 > value1 && value_6 > value_2 && value_6 < value_3 && value_6 < value_5 && value_6 > value_4) || 
+    (value_6 > value1 && value_6 > value_2 && value_6 < value_3 && value_6 > value_5 && value_6 < value_4) || 
+
+    (value_6 > value1 && value_6 > value_2 && value_6 > value_3 && value_6 < value_5 && value_6 < value_4)
+)
+{
+    result_3 = value_6;
+}
+if(
+    (value_6 < value1 && value_6 < value_2 && value_6 < value_3 && value_6 > value_5 && value_6 > value_4) || 
+    (value_6 < value1 && value_6 < value_2 && value_6 > value_3 && value_6 < value_5 && value_6 > value_4) || 
+    (value_6 < value1 && value_6 < value_2 && value_6 > value_3 && value_6 > value_5 && value_6 < value_4) || 
+
+    (value_6 > value1 && value_6 < value_2 && value_6 < value_3 && value_6 < value_5 && value_6 > value_4) || 
+    (value_6 > value1 && value_6 < value_2 && value_6 < value_3 && value_6 > value_5 && value_6 < value_4) || 
+    
+    (value_6 > value1 && value_6 > value_2 && value_6 < value_3 && value_6 < value_5 && value_6 < value_4) || 
+    (value_6 > value1 && value_6 < value_2 && value_6 > value_3 && value_6 < value_5 && value_6 < value_4) 
+)
+{
+    result_4 = value_6;
+}
+if(
+    (value_6 < value1 && value_6 < value_2 && value_6 < value_3 && value_6 < value_5 && value_6 > value_4) ||
+    (value_6 < value1 && value_6 < value_2 && value_6 < value_3 && value_6 > value_5 && value_6 < value_4) ||
+    (value_6 > value1 && value_6 < value_2 && value_6 < value_3 && value_6 < value_5 && value_6 < value_4)  
+){
+    result_5 = value_6;
+}
+if(value_6 < value1 && value_6 < value_2 && value_6 < value_3 && value_6 < value_5 && value_6 < value_4){
+    result_6 = value_6;
+}
+console.log("value1:" + value1);
+console.log("value2:" + value_2);
+console.log("value3:" + value_3);
+console.log("value4:" + value_4);
+console.log("value5:" + value_5);
+console.log("value6:" + value_6);
+console.log(result_1 + " " + result_2 + " " + result_3 + " " + result_4 + " " + result_5 + " " + result_6);
+
+// let mins = "0";
+// mins += "46";
+// console.log(mins.substring(mins.length - 2));
