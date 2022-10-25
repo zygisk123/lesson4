@@ -247,7 +247,7 @@ let new_sec;
 let max8 = 300;
 let min8 = 0;
 
-let randomSec = (Math.random() * (max8 - min8) + min8);
+let randomSec = Math.round(Math.random() * (max8 - min8) + min8);
 // cia saugosiu sekundziu likuti
 let randomSec2 = 0;
 
@@ -290,8 +290,13 @@ if (randomSec >= 60){
 }
 
 console.log("Random sec: " + randomSec);
-console.log("Clock " + hour + ":" + minut + ":0" + sec);
+console.log("Clock " + hour + ":" + minut + ":" + sec);
+
 console.log("New Clock " + new_hour + ":" + minut2 + ":" + Math.round(new_sec * 100) / 100);
 
 
 console.log("10 uzduotis");
+
+let mins = "0";
+mins += "46";
+console.log(mins.substring(mins.length - 2));
