@@ -241,7 +241,8 @@ let minut2;
 // cia saugosiu nauja minuciu reiksme
 let new_minut;
 
-let sec = 0;
+let sec = 59;
+let new_sec;
 
 let max8 = 300;
 let min8 = 0;
@@ -250,36 +251,47 @@ let randomSec = (Math.random() * (max8 - min8) + min8);
 // cia saugosiu sekundziu likuti
 let randomSec2 = 0;
 
+// Gauname minuciu skaiciu
+new_minut = Math.floor(randomSec / 60);
+minut2 = minut + new_minut;
+// gauname sekundziu likuti
+randomSec2 = randomSec - new_minut * 60;
+
 if (randomSec >= 60){
-    // Gauname minuciu skaiciu
-    new_minut = Math.floor(randomSec / 60);
-    minut2 = minut + new_minut;
-    // gauname sekundziu likuti
-    randomSec2 = Math.round((randomSec - new_minut * 60) * 100) / 100;
-}else{
-    randomSec2 = Math.round(randomSec * 100) / 100;
-    randomSec2 += sec;
-    if(randomSec2 >= 60){
+    new_sec = Math.round((randomSec2 + sec) * 100) / 100;
+    if(new_sec >= 60){
+        new_sec -= 60;
         minut2++;
-        randomSec2 -= 60;
-        minut2 -= 60;
+        if(minut2 >= 60){
+            minut2 -= 60;
+            if(hour == 23){
+                new_hour = "00";
+            }
+            else{
+                new_hour = hour+1;
+            }
+        }
+    }
+}else{
+    new_sec = Math.round((randomSec2 + sec) * 100) / 100;
+    if(new_sec >= 60){
+        new_sec -= 60;
+        minut2++;
+        if(minut2 >= 60){
+            minut2 -= 60;
+            if(hour == 23){
+                new_hour = "00";
+            }
+            else{
+                new_hour = hour+1;
+            }
+        }
     }
 }
-
-if(minut2 >= 60){
-    if(hour == 23){
-        new_hour = "00";
-    }
-    else{
-        new_hour = hour+1;
-    }
-    minut2 -= 60;
-}
-
 
 console.log("Random sec: " + randomSec);
 console.log("Clock " + hour + ":" + minut + ":0" + sec);
-console.log("New Clock " + new_hour + ":" + minut2 + ":" + randomSec2);
+console.log("New Clock " + new_hour + ":" + minut2 + ":" + Math.round(new_sec * 100) / 100);
 
 
 console.log("10 uzduotis");
